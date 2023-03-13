@@ -77,13 +77,15 @@ class Invoice(models.Model):
             verbose_name = "Invoice"
             verbose_name_plural = "Invoices"
 
-        def __str__(self) :
-            return f"{self.customer.name}_{self.invoice_date_time}"
-
+        def __str__(self):
+           return f"{self.customer.name}_{self.invoice_date_time}"
+        
         @property
-        def get_total(self) : 
-            articles = self.article_set.all()
-            total = sum(article.get_total for article in articles )
+        def get_total(self):
+            articles = self.article_set.all()   
+            total = sum(article.get_total for article in articles)
+            return total 
+           
 
     
 class Article(models.Model):
@@ -108,5 +110,6 @@ class Article(models.Model):
 
         @property
         def get_total(self):
-            total = self.quantity * self.unit_price
+            total = self.quantity * self.unit_price   
+            return total  
             
