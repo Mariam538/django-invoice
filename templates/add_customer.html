@@ -2,22 +2,72 @@
 
 {% block content %}
 
-<br><br>
+<br><br><br><br>
 <h1 class="text-capitalize  text-center mx-10 bg-dark text-white">Register a new customer </h1>
 
 <!-- CFREATION DE FORMULAIRE -->
 <form method="post">
+  <div class='form-row'>
 
-  <div class='form-row'> 
     <div class="form-group.col-md-6">
         <label for="name">Name</label>
+        <input name='name' required type="text" class="form-control" id="name" placeholder="customer first and last name">    
+    </div>
 
-        <label for="name">Name</label>
-        
-        <label for="name">Name</label>
-    </div> 
+    <div class="form-group.col-md-4">
+        <label for="email">Email</label>
+        <input name="email"  type="email" class="form-control" id="email" placeholder="customer email">    
+    </div>
+
+    <div class="form-group.col-md-4">
+      <label for="phone">Tel</label>
+      <input name="phone" required type="number" class="form-control" id="phone" placeholder="customer phone number ">    
+    </div>
+  </div>
+  
+  <div class='form-row'>
+
+    <div class="form-group.col-md-6"> 
+      <label for="Sex">Sex</label>
+      <select name="sex"required id="sex">
+         <option>Choose the gender... </option>
+         <option value="M">Male</option>
+         <option value="F">Feminine</option>
+      </select>
+    </div>
+
+    <div class="form-group.col-md-6"> 
+      <label for="age">Age</label>
+      <select name="age" id="age">
+         <option>Choose age... </option>
+         <option value="0-15">0-15</option>
+         <option value="16-25">16-25</option>
+      </select>
+    </div>
+
   </div>
 
-</form>
+  <div class="form-row">
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input name='address'type="text" class="form-control" id="address" placeholder="customer address">
+    </div>
+  </div>
 
+  <div class="form-row">
+    <div class="form-group.col-md-6">
+      <label for="city">City</label>
+      <input name="city" required type="text" class="form-control" id="city" placeholder="customer city">
+    </div>
+
+    <div class="form-group.col-md-6">
+      <label for="zip">Zip code</label>
+      <input name="zip" type="text" class="form-control" id="zip" placeholder="customer zip code">
+    </div>
+
+  </div>
+ 
+   <button type="submit" class="btn btn-primary">Save</button>
+</form>
+<br><br><br><br>
 {% endblock content %}
