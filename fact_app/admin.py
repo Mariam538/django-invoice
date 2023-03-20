@@ -3,7 +3,7 @@ from .models import *
 # Register your models here.
 
 class AdminCustomer(admin.ModelAdmin):
-    list_display = ('name','email', 'phone', 'address', 'sex', 'age', 'city','zip_code')   
+    list_display = ('name','email', 'phone', 'address', 'sex', 'age', 'city','zip')   
 
 class AdminInvoice(admin.ModelAdmin):
     list_display = ('customer','save_by','invoice_date_time','total','last_updated_date','paid','invoice_type')

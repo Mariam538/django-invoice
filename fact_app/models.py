@@ -12,6 +12,12 @@ class Customer(models.Model):
                 ('M','Masculin'),
                 ('F','Feminin'),
     )
+    OPTION_TYPES = (
+                ('P','Preniuim'),
+                ('S','Sylver'),
+                ('G','Gold'),
+
+    )
     
     name = models.CharField(max_length=132)
     
@@ -27,7 +33,7 @@ class Customer(models.Model):
 
     city = models.CharField(max_length=100)
 
-    zip_code = models.CharField(max_length=16)
+    zip = models.CharField(max_length=1, choices=OPTION_TYPES)
 
     created_date = models.DateTimeField(auto_now_add=True)
 
