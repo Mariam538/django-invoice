@@ -18,7 +18,6 @@ try:
     }
 except Exception as e:
     pass
-SECRET_KEY = 'django-insecure-=v*)!69k0jvx6k1ja&avm-^-#gq&)@d*=-m8y7w#+f4=iqy-z-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

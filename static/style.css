@@ -6,7 +6,10 @@ body{
     background: #1A233A;
     position: relative;
     height: 100%;
+
 }
+
+
 .invoice-container {
     padding: 1rem;
 }
@@ -17,6 +20,7 @@ body{
     font-weight: 700;
     color: #bcd0f7;
 }
+
 .invoice-container .invoice-header .invoice-logo img {
     max-width: 130px;
 }

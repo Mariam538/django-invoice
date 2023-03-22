@@ -6,7 +6,7 @@
 <br><br>
 
 <div class="row">
-   <a href="#" class="btn col-md-4 btn-primary">
+   <a href="{% url 'add-invoice' %}" class="btn col-md-4 btn-primary">
       Register a new invoice <span class="badge text-bg-secondary"></span>
    </a>
 
@@ -159,7 +159,7 @@
       $('#id_modified').val(invoice_id);
 
    })
-
+   
    // deleting of invoice
 
    $(document).on('click', '#btn-invoice-sup', function(){
@@ -170,7 +170,6 @@
    })
 
 </script>
-
 
 <script>
 
